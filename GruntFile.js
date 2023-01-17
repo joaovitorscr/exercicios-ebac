@@ -13,13 +13,13 @@ module.exports = function (grunt) {
                 },
             }
         },
-            uglify: {
-                target: {
-                    files: {
-                        "dist/scripts/main.min.js": "src/scripts/main.js",
-                    },
+        uglify: {
+            target: {
+                files: {
+                    "dist/scripts/main.min.js": "src/scripts/main.js",
                 },
             },
+        },
     });
 
     grunt.loadNpmTasks("grunt-contrib-less");
