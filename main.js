@@ -1,7 +1,7 @@
 function Animal(nome) {
     this.nome = nome;
-    this.som = function () {
-        return 'This is an abstract'
+    this.som = function() {
+        return 'Som do animal'
     }
 }
 
