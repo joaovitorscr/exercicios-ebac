@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const following = document.querySelector('#following');
     const link = document.querySelector('#link');
 
-    fetch('https://api.github.com/users/ogiansouza')
+    fetch('https://api.github.com/users/joaovitorscr')
     .then(function(resposta) {
         return resposta.json();
     })
@@ -19,5 +19,10 @@ document.addEventListener('DOMContentLoaded', function() {
         followers.innerText = json.followers;
         following.innerText = json.following;
         link.href = json.html_url;
+    })
+    .catch(function() {
+        const container = document.querySelector('body');
+        container.innerHTML = '<h2>ERRO</h2> Não foi possível recuperar os dados da página do github'
+        container.classList.add('error')
     })
 })
